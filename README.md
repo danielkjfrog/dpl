@@ -43,7 +43,7 @@ Dpl is published to rubygems.
 * Dpl requires ruby with a version greater than 1.8.7
 * To install: `gem install dpl`
 
-## Usage:
+## Usage :
 
 ###Security Warning:
 
@@ -89,7 +89,7 @@ As a rule of thumb, you should switch to the Git strategy if you run into issues
 ```groovy
 {
 	/* Bintray package information.
-	   In case the package already exists on Bintray, only the name, repo and subject 
+	   In case the package already exists on Bintray, only the name, repo and subject
 	   fields are mandatory. */
 
 	"package": {
@@ -126,7 +126,7 @@ As a rule of thumb, you should switch to the Git strategy if you run into issues
 	},
 
 	/* Configure the files you would like to upload to Bintray and their upload path.
-	You can define one or more groups of patterns. 
+	You can define one or more groups of patterns.
 	Each group contains three patterns:
 
 	includePattern: Pattern in the form of Ruby regular expression, indicating the path of files to be uploaded to Bintray.
@@ -139,7 +139,7 @@ As a rule of thumb, you should switch to the Git strategy if you run into issues
 	The files will be uploaded to Bintray under the gems folder.
 	2. All files under build/docs. The files will be uploaded to Bintray under the docs folder.*/
 
-	"files": 
+	"files":
 		[
 		{"includePattern": "build/bin/(.*)?(.*\.gem)", "excludePattern": ".*/do-not-deploy/.*", "uploadPattern": "gems/$2"},
 		{"includePattern": "build/docs/(.*)", "uploadPattern": "docs/$1"}
@@ -535,7 +535,7 @@ For accounts using two factor authentication, you have to use an oauth token as 
 
 ### Lambda:
 
-#### Options: 
+#### Options:
 
  * **function_name**: Required. The name of the Lambda being created / updated.
  * **role**: Required. The ARN of the IAM role to assign to this Lambda function.
@@ -597,4 +597,3 @@ and your testers can start testing your app.
 #### Examples:
 
     dpl --provider=testfairy --api-key=<api-key> --app-file="out/Sample.apk" --keystore-file="out/keystore" --storepass=<storepass> --alias=<alias>
-
